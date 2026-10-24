@@ -38,13 +38,13 @@ Sections 1–6 are what the agent did. The last section is my own notes.
 
 ## My changes and review
 
-I picked Project 2 because it had the clearest problem out of the ten: people look at what percent of their money is in each stock and assume that's how their risk is split too. I wanted to see if that holds up.
+The number that got me was 45%. That's how much of the portfolio's risk comes from AAPL in the default example, even though AAPL is only 40% of the money. I honestly expected those two to be the same. SPY goes the other way: 25% of the money, under 19% of the risk. If you only look at the allocation pie, you'd never know AAPL was carrying more than its share.
 
-My first prompt was the assignment sheet with "finish this project." Claude asked which project I wanted before writing anything, I chose the portfolio risk analyzer, and it built the app from there. I didn't write the Python myself. My part was choosing the project, deciding what it needed to do, and checking that the output made sense.
+That's basically why I picked Project 2 out of the ten. People split their money by percent and assume the risk splits the same way, and I wanted something that would show whether that's true.
 
-The result that surprised me was the risk contribution chart. In the default AAPL / MSFT / SPY portfolio, AAPL is 40% of the money but about 45% of the risk. I expected those to match. They don't, because AAPL moves more than the other two, so it pulls more of the portfolio's swings than its weight suggests. SPY goes the other way, 25% of the money but under 19% of the risk.
+How it actually got built: I gave Claude the assignment sheet and said "finish this project." Before writing anything it asked me which project I wanted, and once I picked the portfolio risk analyzer it built the app, the tests and the docs. I didn't write the Python. My part was picking the project, deciding what it needed to do, and checking that the results made sense, like comparing the AAPL and SPY numbers above against the charts.
 
-One thing to know about the screenshots: they come from demo mode, which uses simulated prices, so the returns in them aren't real (that's why AAPL shows a loss). Claude's workspace couldn't reach Yahoo Finance or Finnhub, so it built a synthetic dataset to test with and labeled it as fake everywhere it shows up instead of passing it off as market data.
+Heads up on the screenshots, since they look worse than you'd expect: they're from demo mode, which runs on simulated prices. That's why AAPL shows a loss. Claude's workspace couldn't reach Yahoo Finance or Finnhub, so it made a fake dataset to test with and labeled it as fake everywhere instead of passing it off as real market data. I still want to see if the 40/45 gap shows up the same way on real prices.
 
-- **Live data test:** [fill in after running it: date, tickers tried, anything that broke]
+- **Live data test:** [fill in after running it: date, tickers tried, whether the AAPL risk gap held up, anything that broke]
 - **Changes I asked for:** [fill in if you change anything]
