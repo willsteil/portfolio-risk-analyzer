@@ -38,13 +38,13 @@ Sections 1–6 are what the agent did. The last section is my own notes.
 
 ## My changes and review
 
-I went with Project 2 because it's the closest thing on the list to what I already do. I day trade NQ futures through prop firms, and the number that decides whether I keep an account isn't my win rate, it's my max drawdown. Hit the limit and the account is gone. So a tool that shows you how deep a portfolio can fall before it comes back made sense to me right away.
+I picked Project 2 because it had the clearest problem out of the ten: people look at what percent of their money is in each stock and assume that's how their risk is split too. I wanted to see if that holds up.
 
-My first prompt was basically "finish this project" with the assignment sheet attached. Claude asked which of the ten projects I wanted, I picked the portfolio risk analyzer, and it built the whole thing from there. I'm not going to pretend I wrote the Python. What I did was steer it, decide what it should be, and check that it made sense.
+My first prompt was the assignment sheet with "finish this project." Claude asked which project I wanted before writing anything, I chose the portfolio risk analyzer, and it built the app from there. I didn't write the Python myself. My part was choosing the project, deciding what it needed to do, and checking that the output made sense.
 
-The part I didn't expect was the risk contribution chart. In the default AAPL / MSFT / SPY portfolio, AAPL is 40% of the money but about 45% of the risk. I would have guessed those two numbers were the same. They're not, because AAPL swings harder than the other two, so a position can be "only 40%" and still be running most of the show. Honestly that's the same lesson as sizing a futures trade: the contract count isn't the risk, the volatility behind it is.
+The result that surprised me was the risk contribution chart. In the default AAPL / MSFT / SPY portfolio, AAPL is 40% of the money but about 45% of the risk. I expected those to match. They don't, because AAPL moves more than the other two, so it pulls more of the portfolio's swings than its weight suggests. SPY goes the other way, 25% of the money but under 19% of the risk.
 
-The other thing I noticed is that the screenshots in this repo are from demo mode, which uses made-up prices. That's why AAPL shows a loss in them. Claude's workspace couldn't reach Yahoo or Finnhub, so it built a fake dataset to test with and labeled it everywhere so nobody confuses it with real data. I like that it did that instead of making numbers up and passing them off as real.
+One thing to know about the screenshots: they come from demo mode, which uses simulated prices, so the returns in them aren't real (that's why AAPL shows a loss). Claude's workspace couldn't reach Yahoo Finance or Finnhub, so it built a synthetic dataset to test with and labeled it as fake everywhere it shows up instead of passing it off as market data.
 
 - **Live data test:** [fill in after running it: date, tickers tried, anything that broke]
 - **Changes I asked for:** [fill in if you change anything]
