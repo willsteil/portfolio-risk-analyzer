@@ -41,7 +41,7 @@ These were taken in **demo mode**, which uses the bundled *synthetic* dataset, s
 Requires **Python 3.10+**.
 
 ```bash
-git clone https://github.com/<your-username>/portfolio-risk-analyzer.git
+git clone https://github.com/willsteil/portfolio-risk-analyzer.git
 cd portfolio-risk-analyzer
 
 python -m venv .venv
